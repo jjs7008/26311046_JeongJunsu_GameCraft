@@ -1,0 +1,8 @@
+GitHub Desktop 안내
+1. MoonlightDelivery_Week1 폴더를 GitHub Desktop에 로컬 저장소로 추가합니다(필요하면 Create a Repository).
+2. 저장소 이름은 학번_이름(영문)_GameCraft를 사용하세요.
+3. 변경사항을 commit 하고 Publish repository 합니다.
+4. Repository 메뉴에서 Open in Command Prompt 실행 후 git tag f1 && git push origin f1
+5. GitHub의 f1 태그를 확인하고 릴리스를 생성합니다.
+
+주의: 파일을 ZIP으로 올리는 것만으로 Git 커밋과 태그가 생성되지 않습니다.
