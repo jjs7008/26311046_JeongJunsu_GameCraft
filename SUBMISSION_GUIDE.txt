@@ -1,8 +1,11 @@
-GitHub Desktop 안내
-1. MoonlightDelivery_Week1 폴더를 GitHub Desktop에 로컬 저장소로 추가합니다(필요하면 Create a Repository).
-2. 저장소 이름은 학번_이름(영문)_GameCraft를 사용하세요.
-3. 변경사항을 commit 하고 Publish repository 합니다.
-4. Repository 메뉴에서 Open in Command Prompt 실행 후 git tag f1 && git push origin f1
-5. GitHub의 f1 태그를 확인하고 릴리스를 생성합니다.
+달빛 배송작전 - 2주차 제출 안내
 
-주의: 파일을 ZIP으로 올리는 것만으로 Git 커밋과 태그가 생성되지 않습니다.
+1) 반드시 기존 1주차 GitHub 저장소 26311046_JeongJunsu_GameCraft를 사용하세요.
+2) 이번 ZIP의 파일을 압축 해제하고 저장소에 업로드하세요. ZIP 자체를 업로드하지 마세요.
+3) 1주차 파일을 포함한 전체 스냅샷이므로 동일 이름 파일은 이번 버전으로 덮어써야 합니다.
+   GitHub 웹 업로드에서 같은 경로 덮어쓰기가 불편하면 GitHub Desktop으로 저장소를 클론하고 로컬에서 파일을 복사하세요.
+4) README와 Docs/Week2_Development.md가 반영되었는지 확인하세요.
+5) 커밋 메시지: 2주차 - 리소스 정리 및 게임 기본 구조 구현
+6) 새 릴리스 태그 f2, 대상 main, 제목: 2주차 - 리소스 및 기본 구조
+7) 기존 f1 릴리스/태그 삭제, 재생성, 덮어쓰기는 하지 마세요.
+8) 제출 전 Visual Studio 2022에서 NuGet 복원, 빌드, 실행, Enter/이동/Esc/Space 확인을 권장합니다.

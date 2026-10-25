@@ -1,36 +1,45 @@
 # 달빛 배송작전 (Moonlight Delivery)
 
-C++ / glc2d로 만드는 2D 수집·회피 게임. **현재 1주차 시제품**입니다.
+C++ / glc2d로 개발하는 2D 수집·회피 아케이드 게임. **현재 2주차: 리소스와 기본 구조 단계**입니다.
 
-## 프로젝트 상태
+![2주차 타이틀 미리보기](Docs/Week2_Preview.png)
 
-- 구현 완료: glc2d 게임 창, WASD/방향키 이동, 플레이어 위치 제한, 택배와 위험 물체 낙하 표현
-- 추후 구현: 충돌, 수집, 체력, 점수, 타이머, 화면 전환, 3개 스테이지, 애니메이션
-- 게임 기획서: [1주차 기획서](Docs/Week1_GamePlan.md)
+## 개발 진행 현황
 
-## 개발 환경
+| 구분 | 상태 |
+|---|---|
+| 1주차: 기획서 및 움직이는 시제품 | 완료 (`f1`) |
+| 2주차: 화면 리소스, 사운드 파일, 클래스 구조 | 코드/파일 준비 (`f2` 예정) |
+| 3주차: 수집·충돌·체력·점수·시간 | 예정 |
+| 4주차: 스테이지, 난이도, 효과 | 예정 |
 
-Windows / Visual Studio 2022 / C++ / glc2d NuGet 패키지 / Microsoft.DXSDK.D3DX NuGet 패키지
+## 2주차에서 만든 것
 
-## 실행 방법
+- Title / Playing / GameOver / Clear 상태 및 화면 리소스
+- `Game`, `Player`, `FallingObject` 클래스 구분
+- 게임 화면 배경, 낙하 오브젝트, 플레이어 이동
+- 추후 구현에 사용할 효과음 3종 (재생 로직은 미구현)
 
-1. `MoonlightDelivery/MoonlightDelivery.sln`을 Visual Studio 2022로 연다.
-2. 솔루션 우클릭 → **NuGet 패키지 복원**을 선택한다 (프로젝트의 `packages.config` 참조).
-3. 플랫폼을 `x64`, 구성을 `Debug`로 두고 로컬 Windows 디버거로 실행한다.
-4. WASD 또는 방향키로 로봇을 이동한다. 택배와 장애물은 아직 시각적 테스트 용도다.
+## 조작
 
-**주의:** 이 환경에서 Windows용 빌드/실행 테스트는 수행하지 못했다. NuGet 패키지 복원 또는 라이브러리 경로 오류가 나면 Visual Studio 출력 창을 확인해야 한다. 샘플 프로젝트 설정은 제공 SDK의 `app_nuget/Ex04_Keyboard`를 바탕으로 했다.
+- **Enter**: 타이틀에서 시작, 결과 화면에서 타이틀 이동
+- **WASD / 방향키**: 플레이어 이동
+- **Esc**: 플레이 화면에서 타이틀 복귀
+- **Space**: 게임오버 **화면 미리보기** (실제 실패 조건 아님)
 
-## 제출 및 Git 관리
+## Visual Studio 실행 방법
 
-교수님 지침에 맞는 저장소 이름: `학번_이름(영문)_GameCraft`.
+1. `MoonlightDelivery/MoonlightDelivery.sln` 열기
+2. Visual Studio 2022에서 NuGet 패키지 복원 (`glc2d`, `Microsoft.DXSDK.D3DX`)
+3. `Debug | x64`로 설정, `Ctrl + F5` 실행
+4. 이미지가 표시되지 않으면 디버깅 작업 디렉터리가 `MoonlightDelivery` 폴더인지 확인
 
-초기 커밋 후 1주차 태그 `f1`을 만들고 GitHub로 푸시한다. `.vs`, 빌드 산출물, 다운로드된 `packages` 폴더는 올리지 않는다.
+> 여기서 Windows 환경 빌드 및 실행은 검증하지 못했습니다. VS 설치 및 NuGet 복원 문제는 실제 실행 테스트가 필요합니다.
 
-## 라이브러리 / 참고 자료
+## 과제 문서
 
-- [glc2d 라이브러리 소스 및 샘플](https://github.com/3dapi/glc2d_lib)
-- [glc2d NuGet](https://www.nuget.org/packages/glc2d)
-- [Microsoft.DXSDK.D3DX](https://www.nuget.org/packages/Microsoft.DXSDK.D3DX/9.29.952.8)
+- [1주차 기획서](Docs/Week1_GamePlan.md)
+- [2주차 개발 정리](Docs/Week2_Development.md)
+- [2주차 화면 미리보기](Docs/Week2_Preview.png)
 
-이미지 3종은 이 과제용으로 직접 생성한 간단한 PNG 도형 리소스다.
+GitHub 제출은 반드시 기존 **동일한 저장소**에서 진행하고, 파일을 커밋한 뒤 `f2` 태그와 릴리스를 생성합니다. 기존 `f1` 태그는 수정하지 않습니다.
