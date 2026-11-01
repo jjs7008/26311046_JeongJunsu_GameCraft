@@ -1,0 +1,5 @@
+Week 3 correction:
+Game.cpp: FallingObject::Reset now receives 4 arguments including isHazard.
+
+NuGet packages must be restored and the glc2d.h header must be discoverable through the project properties.
+This ZIP has not been built on Windows. Keep f1/f2 tags unchanged.

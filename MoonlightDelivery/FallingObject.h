@@ -1,23 +1,16 @@
 #pragma once
 #include "glc2d.h"
-
 class FallingObject {
 public:
-    float x = 200.0f;
-    float y = -60.0f;
-    float speed = 2.5f;
-    int lane = 0;
-
-    void Reset(float startX, float startY, float fallSpeed) {
-        x = startX; y = startY; speed = fallSpeed; lane = 0;
+    float x=100.0f, y=-60.0f, speed=1.30f;
+    int lane=0;
+    bool hazard=false;
+    void Reset(int whichLane, float startY, float fallSpeed, bool isHazard) {
+        lane=whichLane%3; x=120.0f+220.0f*lane;
+        y=startY; speed=fallSpeed; hazard=isHazard;
     }
-    void Update() {
-        y += speed;
-        if (y > 600.0f) {
-            y = -60.0f;
-            lane = (lane + 1) % 3;
-            x = 130.0f + 220.0f * lane;
-        }
-    }
-    void Draw(int texture) const { VEC2 position(x, y); g2_Draw2D(texture, NULL, &position); }
+    // The game decides when to respawn to ensure scoring happens only once.
+    void Update() { y+=speed; }
+    bool IsOffScreen() const {return y>620.0f;}
+    void Draw(int texture) const { VEC2 pos(x,y); g2_Draw2D(texture,NULL,&pos); }
 };
