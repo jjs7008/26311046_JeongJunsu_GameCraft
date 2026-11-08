@@ -1,4 +1,4 @@
-// Moonlight Delivery - Week 3: collisions, score, health and real play.
+// Moonlight Delivery - Week 4: three stages, moving hazards, animation and feedback.
 // Based on the glc2d keyboard and texture examples.
 #if defined(_DEBUG)
  #if defined(_M_X64)
@@ -23,7 +23,7 @@ int main() {
     g2_SetClearColor(0xFF101A30);
     g2_SetFrameMove(FrameMove);
     g2_SetRender(Render);
-    g2_CreateWin(100, 100, 800, 600, "Moonlight Delivery - Week 3");
+    g2_CreateWin(100, 100, 800, 600, "Moonlight Delivery - Week 4");
     game.Load();
     g2_Run();
     game.Unload();
